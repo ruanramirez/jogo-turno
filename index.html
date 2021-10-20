@@ -16,7 +16,8 @@
 				<div class="life-bar">
 					<div class="life"
 						:class="{danger: playerLife < 20}"
-						:style="{width: playerLife + '%'}"></div>
+						:style="{width: playerLife + '%'}">
+					</div>
 				</div>
 				<div>{{ playerLife }}%</div>
 			</div>
@@ -25,7 +26,8 @@
 				<div class="life-bar">
 					<div class="life"
 						:class="{danger: monsterLife < 20}"
-						:style="{width: monsterLife + '%'}"></div>
+						:style="{width: monsterLife + '%'}">
+					</div>
 				</div>
 				<div>{{ monsterLife }}%</div>
 			</div>
@@ -39,9 +41,16 @@
 				<button class="btn attack">Attack</button>
 				<button class="btn special-attack">Special Attack</button>
 				<button class="btn heal">Heal</button>
-				<button class="btn give-up">Surrender</button>
+				<button class="btn give-up"
+						@click="running = false">
+						Surrender
+				</button>
 			</template>
-			<button v-else class="btn new-game">Start</button>
+			<button v-else
+					class="btn new-game"
+					@click="startGame">
+					Start
+			</button>
 		</div>
 		<div class="panel logs"></div>
 	</div>
