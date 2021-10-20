@@ -5,10 +5,15 @@
 	font-size: 10px;
 	--color-shadow: rgba(0, 0, 0, 0.15);
 	--color-green: #2AB40E;
+	--color-win: #22a308;
 	--color-red: #dd4019;
-	--color-win: #1e7e0a;
-	--color-lose: #c51d1d;
-
+	--color-lose: #b1350f;
+	--color-white: #ffffff;
+	--color-start: #123456;
+	--color-attack: #561a12;
+	--color-special-attack: #564412;
+	--color-heal: #185612;
+	--color-surrender: #1c1256;
 }
 
 html {
@@ -80,4 +85,62 @@ html {
 
 .result .lose {
 	color: var(--color-lose);
+}
+
+/* buttons area (game control) */
+
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.btn {
+	padding: 1rem 2rem;
+	margin: 0 1rem;
+	border-radius: .4rem;
+	font-size: 1.8rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color .5s;
+	color: var(--color-white);
+}
+
+.new-game {
+	background-color: var(--color-start);
+}
+
+.attack {
+	background-color: var(--color-attack);
+}
+
+.special-attack {
+	background-color: var(--color-special-attack);
+}
+
+.heal {
+	background-color: var(--color-heal);
+}
+
+.give-up {
+	background-color: var(--color-surrender);
+}
+
+.btn.new-game:hover {
+	background-color: #0d4d8d;
+}
+
+.btn.attack:hover {
+	background-color: #a00f0f;
+}
+
+.btn.special-attack:hover {
+	background-color: #9b5f11;
+}
+
+.btn.heal:hover {
+	background-color: #0d8d18;
+}
+
+.btn.give-up:hover {
+	background-color: #5e0d8d;
 }
